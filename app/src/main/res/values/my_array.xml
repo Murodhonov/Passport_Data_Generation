@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner1">
+
+        <item>Viloyatni tanlang</item>
+        <item>Farg\'ona</item>
+        <item>Andijon</item>
+        <item>Namangan</item>
+
+    </string-array>
+
+    <string-array name="male_female">
+
+        <item>Jinsi</item>
+        <item>Erkak</item>
+        <item>Ayol</item>
+
+    </string-array>
+</resources>

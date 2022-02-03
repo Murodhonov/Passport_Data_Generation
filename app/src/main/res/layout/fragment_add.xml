@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".AddFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/action_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:elevation="10dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/back_arrow12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5sp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuqaroning ma'lumotlarini qo'shish"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:layout_height="60dp"
+            android:inputType="text"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/action_bar"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:hint="Fuqaroning ismi"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:inputType="text"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:hint="Fuqaroning familiyasi"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:inputType="text"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/surname"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:hint="Otasining ismi"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <Spinner
+            android:id="@+id/spinner_region"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:layout_constraintTop_toBottomOf="@id/lastname"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:entries="@array/spinner1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/spinner_region"
+            app:layout_constraintRight_toRightOf="@id/spinner_region"
+            app:layout_constraintLeft_toLeftOf="@id/spinner_region"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_region"
+            app:layout_constraintHorizontal_bias="0.96"
+            android:rotation="270"
+            android:layout_marginBottom="10sp"/>
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/spinner_region"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:hint="Shaxar tuman"
+            android:textAlignment="center"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/city"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:hint="Uyining manzili"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:hint="Passport olgan vaqti"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/expiration_date"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.85"
+            android:layout_height="60dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:hint="Passport muddati"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <Spinner
+            android:id="@+id/spinner_male_female"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:layout_constraintTop_toBottomOf="@id/expiration_date"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:entries="@array/male_female"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/spinner_male_female"
+            app:layout_constraintRight_toRightOf="@id/spinner_male_female"
+            app:layout_constraintLeft_toLeftOf="@id/spinner_male_female"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_male_female"
+            app:layout_constraintHorizontal_bias="0.96"
+            android:rotation="270"
+            android:layout_marginBottom="10sp"/>
+
+        <ImageView
+            android:id="@+id/imageAdd"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/placeholder_image_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20sp"
+            app:layout_constraintTop_toBottomOf="@id/spinner_male_female"/>
+
+        <TextView
+            android:id="@+id/simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuqaroning rasmi 3x4"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageAdd"
+            android:textStyle="italic"
+            android:layout_marginTop="5sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn1"
+            app:layout_constraintTop_toBottomOf="@id/simple"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="Saqlash"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
